@@ -5,9 +5,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-your-secret-key-here-change-in-production'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://picloud-storage.onrender.com',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'https://picloud-storage.onrender.com',
+]
+
+
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
+ALLOWED_HOSTS = ['picloud-storage.onrender.com','localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
